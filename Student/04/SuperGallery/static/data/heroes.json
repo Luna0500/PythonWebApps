@@ -1,0 +1,66 @@
+{
+    "0": {
+        "name": "spiderman",
+        "title": "Spiderman",
+        "id": "Peter Parker",
+        "strength1": "Web Powers",
+        "strength2": "Spidey Senses",
+        "strength3": "Strength",
+        "weakness1": "His Naivete",
+        "weakness2": "Too Much Self Confidence",
+        "weakness3": "Ethyl Chloride Pesticide",
+        "imagePath": "/static/images/0spiderman.webp"
+    },
+
+    "1": {
+        "name": "thing",
+        "title": "Thing",
+        "id": "Ben Grimm",
+        "strength1": "Great Teamwork",
+        "strength2": "Strength",
+        "strength3": "Durability",
+        "weakness1": "Emotional Vulnerability",
+        "weakness2": "Stubborn",
+        "weakness3": "Too Large To Interact With Small Objects",
+        "imagePath": "/static/images/1thing.jpg"
+    },
+
+    "2": {
+        "name": "cyborg",
+        "title": "Cyborg",
+        "id": "Victor Stone",
+        "strength1": "Technopath",
+        "strength2": "Strength",
+        "strength3": "Intellect",
+        "weakness1": "Maintaining His Humanity",
+        "weakness2": "Vulnerable To Magic",
+        "weakness3": "Vulnerable To Mind Control",
+        "imagePath": "/static/images/2cyborg.webp"
+    },
+
+    "3": {
+        "name": "superman",
+        "title": "Superman",
+        "id": "Clark Kent",
+        "strength1": "Laser Vision",
+        "strength2": "Strength",
+        "strength3": "Flight",
+        "weakness1": "Kryptonite",
+        "weakness2": "Vulnerable To Magic",
+        "weakness3": "Red Suns",
+        "imagePath": "/static/images/3superman.webp"
+    },
+
+    "4": {
+        "name": "zatanna",
+        "title": "Zatanna",
+        "id": "Zatanna Zatara",
+        "strength1": "Magic Powers",
+        "strength2": "Creativity",
+        "strength3": "Strong Will",
+        "weakness1": "Can't use magic without speech",
+        "weakness2": "Vulnerable To Magic",
+        "weakness3": "Was scared of puppets",
+        "imagePath": "/static/images/4zatanna.jpg"
+    }
+}

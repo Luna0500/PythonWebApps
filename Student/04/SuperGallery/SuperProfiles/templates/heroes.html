@@ -1,0 +1,17 @@
+{% extends 'theme.html' %}
+
+{% block content %}
+
+<div class="d-flex flex-row">
+
+{% for photo in photos %}
+
+<a href="/hero/{{ photo.id }}">
+    <img class="photo" src="/{{ photo.file }}" alt="Hero {{ photo.id }}" width="300">
+</a>
+
+{% endfor %}
+
+</div>
+
+{% endblock content %}
