@@ -6,8 +6,8 @@ class Reporter(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
 
-    realName = models.CharField(max_length=50)
-    email = models.CharField(max_length=50)
+    realName = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
     bio = models.TextField()
 
     def __str__(self):
@@ -32,8 +32,8 @@ class Hero(models.Model):
 
     reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE, editable=False)
 
-    title = models.CharField(max_length=50)
-    realName = models.CharField(max_length=50)
+    title = models.CharField(max_length=100)
+    realName = models.CharField(max_length=100)
     strength1 = models.CharField(max_length=200)
     strength2 = models.CharField(max_length=200)
     strength3 = models.CharField(max_length=200)
@@ -49,8 +49,8 @@ class Article(models.Model):
 
     reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE, editable=False)
 
-    title = models.CharField(max_length=50)
-    tagline = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    tagline = models.CharField(max_length=200)
     body = models.TextField()
     imagePath = models.CharField(max_length=200)
 
