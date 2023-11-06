@@ -30,7 +30,7 @@ class HeroCarouselView(TemplateView):
             data = []
             for hero in Hero.objects.all():
                 data.append(dict(image_url=hero.imagePath, label=hero.title, link="/hero/"+str(hero.pk), active=""))
-            if (data[0]):
+            if (data.count > 0):
                 data[0]["active"] = "active"
             return data
         
