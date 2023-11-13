@@ -82,7 +82,7 @@ def loadArticleJSONData(request):
     return HttpResponse("File Loaded!")
 
 def exportArticleCSVData(request):
-    table = [[a.pk, a.reporter.pk, a.hero.pk, a.title, a.tagline, a.body] for a in Article.objects.all()]
+    table = [[a.pk, a.reporter.pk, a.hero.pk, a.photo.pk, a.title, a.tagline, a.body] for a in Article.objects.all()]
     with open("articleCSVData.csv", 'w', newline='') as f:
         writer(f).writerows(table)
     return HttpResponse("Data Exported!")
@@ -92,7 +92,8 @@ def loadArticleCSVData(request):
         for row in reader(f):
             reporter = get_object_or_404(Reporter, pk = row[1])
             hero = get_object_or_404(Hero, pk = row[2])
-            article = Article.create(row[0], reporter, hero, row[3], row[4], row[5])
+            photo = get_object_or_404(Photo, pk = row[3])
+            article = Article.create(row[0], reporter, hero, photo, row[4], row[5], row[6])
             article.save()
     return HttpResponse("File Loaded!")
 
@@ -108,7 +109,7 @@ def loadHeroJSONData(request):
     return HttpResponse("File Loaded!")
 
 def exportHeroCSVData(request):
-    table = [[h.pk, h.reporter.pk, h.title, h.realName, h.strength1, h.strength2, h.strength3, h.weakness1, h.weakness2, h.weakness3, h.imagePath] for h in Hero.objects.all()]
+    table = [[h.pk, h.reporter.pk, h.photo.pk, h.title, h.realName, h.strength1, h.strength2, h.strength3, h.weakness1, h.weakness2, h.weakness3] for h in Hero.objects.all()]
     with open("heroCSVData.csv", 'w', newline='') as f:
         writer(f).writerows(table)
     return HttpResponse("Data Exported!")
@@ -117,6 +118,7 @@ def loadHeroCSVData(request):
     with open("heroCSVData.csv") as f:
         for row in reader(f):
             reporter = get_object_or_404(Reporter, pk = row[1])
-            hero = Hero.create(row[0], reporter, row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10])
+            photo = get_object_or_404(Photo, pk = row[2])
+            hero = Hero.create(row[0], reporter, photo, row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10], row[11])
             hero.save()
     return HttpResponse("File Loaded!")

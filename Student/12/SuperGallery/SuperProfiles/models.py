@@ -65,8 +65,8 @@ class Hero(models.Model):
         return f"{self.pk}. {self.title} - {self.realName}"
     
     @classmethod
-    def create(cls, pk, reporter, title, realName, strength1, strength2, strength3, weakness1, weakness2, weakness3, imagePath):
-        hero = cls(pk=pk, reporter=reporter, title=title, realName=realName, strength1=strength1, strength2=strength2, strength3=strength3, weakness1=weakness1, weakness2=weakness2, weakness3=weakness3, imagePath=imagePath)
+    def create(cls, pk, reporter, photo, title, realName, strength1, strength2, strength3, weakness1, weakness2, weakness3, imagePath):
+        hero = cls(pk=pk, reporter=reporter, photo=photo, title=title, realName=realName, strength1=strength1, strength2=strength2, strength3=strength3, weakness1=weakness1, weakness2=weakness2, weakness3=weakness3, imagePath=imagePath)
         return hero
 
 class Article(models.Model):
