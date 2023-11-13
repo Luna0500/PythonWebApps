@@ -90,14 +90,14 @@ class HeroTabsView(TemplateView):
 
             def profile_card_data():
                 card = []
-                card.append(card_data(title=hero.title, imagePath=hero.imagePath, realName=hero.realName, strength1=hero.strength1, strength2=hero.strength2, strength3=hero.strength3, weakness1=hero.weakness1, weakness2=hero.weakness2, weakness3=hero.weakness3))
+                card.append(card_data(title=hero.title, imagePath=f"/media/{hero.photo.image}", realName=hero.realName, strength1=hero.strength1, strength2=hero.strength2, strength3=hero.strength3, weakness1=hero.weakness1, weakness2=hero.weakness2, weakness3=hero.weakness3))
                 return card
 
             def article_cards_data():
                 cards = []
                 for article in Article.objects.all():
                     if (article.hero == hero):
-                        cards.append(card_data(title=article.title, tagline=article.tagline, imagePath=article.imagePath, link="/article/"+str(article.pk)))
+                        cards.append(card_data(title=article.title, tagline=article.tagline, imagePath=f"/media/{article.photo.image}", link="/article/"+str(article.pk)))
                 return cards
 
             def create_pane_1():
