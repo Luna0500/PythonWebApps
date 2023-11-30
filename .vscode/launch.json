@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         /*
         {
             "name": "*Django Test",
@@ -47,7 +48,7 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/Student/08/SuperGallery",
+            "cwd": "${workspaceFolder}/Student/13/SuperGallery",
             "args": [
                 "makemigrations"
             ],
@@ -59,7 +60,7 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/Student/08/SuperGallery",
+            "cwd": "${workspaceFolder}/Student/13/SuperGallery",
             "args": [
                 "migrate"
             ],
@@ -71,7 +72,7 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/Student/08/SuperGallery",
+            "cwd": "${workspaceFolder}/Student/13/SuperGallery",
             "args": [
                 "runserver",
                 "8000"
@@ -84,7 +85,7 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/Student/08/SuperGallery",
+            "cwd": "${workspaceFolder}/Student/13/SuperGallery",
             "args": [
                 "pages"
             ],
@@ -96,9 +97,21 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/Student/08/SuperGallery",
+            "cwd": "${workspaceFolder}/Student/13/SuperGallery",
             "args": [
                 "test"
+            ],
+            "django": true,
+            "justMyCode": true
+        }
+        {
+            "name": "Generate Note Code",
+            "type": "python",
+            "request": "launch",
+            "program": "manage.py",
+            "cwd": "${workspaceFolder}/Student/13/SuperGallery",
+            "args": [
+                "buildcode"
             ],
             "django": true,
             "justMyCode": true
