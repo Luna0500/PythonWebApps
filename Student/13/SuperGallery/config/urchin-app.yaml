@@ -69,7 +69,7 @@ services:
     python manage.py createsuperuser --no-input
 
     gunicorn --worker-tmp-dir /dev/shm config.wsgi
-  source_dir: Student/11/SuperGallery
+  source_dir: Student/13/SuperGallery
 static_sites:
 - environment_slug: html
   github:
@@ -77,4 +77,4 @@ static_sites:
     deploy_on_push: true
     repo: Luna0500/PythonWebApps
   name: superhero-static
-  source_dir: Student/11/SuperGallery/static
+  source_dir: Student/13/SuperGallery/static
